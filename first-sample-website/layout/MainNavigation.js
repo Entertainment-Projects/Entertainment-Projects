@@ -5,7 +5,7 @@ import classes from "./MainNavigation.module.css";
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>This is the Header</div>
+      <div className={classes.logo}>Welcome to my first website!</div>
     </header>
   );
 }
