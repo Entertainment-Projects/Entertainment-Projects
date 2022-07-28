@@ -1,10 +1,27 @@
 import Link from "next/link";
+import { useState } from "react";
+import { useEffect } from "react";
 
 import classes from "./MainNavigation.module.css";
 
 function MainNavigation() {
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      if (window.scrollY > 300) setIsTop(false);
+      else setIsTop(true);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={classes.header}>
+    <header className={`${classes.header} ${!isTop && classes.middle}`}>
       <div className={classes.logo}>Welcome to my first website!</div>
       <div>
         <nav>
