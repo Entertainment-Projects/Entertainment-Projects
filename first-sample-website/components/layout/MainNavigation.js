@@ -7,9 +7,10 @@ import classes from "./MainNavigation.module.css";
 function MainNavigation() {
   const [isTop, setIsTop] = useState(true);
 
+  //For scroll top change color effect
   useEffect(() => {
     const handleScroll = (event) => {
-      if (window.scrollY > 300) setIsTop(false);
+      if (window.scrollY > 200) setIsTop(false);
       else setIsTop(true);
     };
 
