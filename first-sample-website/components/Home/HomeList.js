@@ -7,6 +7,7 @@ const HomeList = () => {
       <img
         src="https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt="Backgound Image"
+        className={classes.image}
       />
 
       <main className={classes.main}>
