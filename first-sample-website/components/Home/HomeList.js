@@ -1,9 +1,15 @@
 import { Fragment } from "react";
 import Image from "next/image";
+import classes from "./HomeList.module.css";
 const HomeList = () => {
   return (
     <Fragment>
-      <main>
+      <img
+        src="https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Backgound Image"
+      />
+
+      <main className={classes.main}>
         <h1>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
